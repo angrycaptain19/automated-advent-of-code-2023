@@ -1,5 +1,5 @@
 import pytest
-from part2 import (
+from .part2 import (
     find_gears,
     find_adjacent_numbers,
     process_schematic,
