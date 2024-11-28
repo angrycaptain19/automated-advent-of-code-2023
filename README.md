@@ -17,12 +17,28 @@ To run tests:
 pytest day1/test_part1.py -v
 ```
 
+### Part 2: Spelled-Out Numbers
+Enhances calibration value extraction to handle both numeric digits and spelled-out numbers (e.g., "one", "two", etc.).
+Handles overlapping cases and combines first and last found digits.
+
+To run the solution:
+```bash
+python -m day1.part2
+```
+
+To run tests:
+```bash
+pytest day1/test_part2.py -v
+```
+
 ## Project Structure
 ```
 .
 └── day1/
     ├── __init__.py
     ├── part1.py
+    ├── part2.py
     ├── test_part1.py
+    ├── test_part2.py
     └── input.txt
 ```
