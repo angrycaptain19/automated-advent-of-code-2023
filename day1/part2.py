@@ -1,4 +1,4 @@
-from part1 import read_input, process_calibration_document
+from .part1 import read_input
 
 NUMBER_WORDS = {
     'one': '1', 'two': '2', 'three': '3', 'four': '4',
@@ -29,8 +29,14 @@ def extract_calibration_value(line: str) -> int:
     
     return int(digits[0] + digits[-1])
 
+def process_calibration_document(lines: list[str]) -> int:
+    """
+    Process all lines in the calibration document and return the sum of calibration values.
+    """
+    return sum(extract_calibration_value(line) for line in lines)
+
 def main():
-    lines = read_input('input.txt')
+    lines = read_input('day1/input.txt')
     result = process_calibration_document(lines)
     print(f"Sum of calibration values: {result}")
 
